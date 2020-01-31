@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Insurance</title>
+    <link rel="icon" type="image/png" href="img/checkmark.png" sizes="32x32">
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+        }
+        #container {
+            width: 55rem;
+            margin: 0 auto;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            background-color: #fff3f3;
+        }
+        .logoArea {
+            padding: 2rem;
+            margin-left: 2rem;
+        }
+        .bannerArea {
+            padding: 1rem;
+            margin-left: 5rem;
+        }
+        nav {
+            background-color: #8e1616;
+            padding: 0.6rem;
+            color: white;
+            margin-top: -5px;
+        }
+        nav ul, footer ul {
+            list-style-type: none;
+        }
+        nav ul li, footer ul li {
+            display: inline;
+            padding-right: 0.4rem; 
+        }
+        .bgImage {
+            padding: 1rem 2rem 1rem 2rem;
+            color: white;
+            background-image: url("img/traffic.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 33rem;
+        }
+        .infoArea {
+            background-color: lightgray;
+            text-align: center;
+            color: darkslategray;
+            padding: 1rem;
+            font-size: 120%;
+        }
+        .overlayForm {
+            background-color: rgb(255,255,255,0.9);
+            width: 48rem;
+            border: 1px solid gray;
+            margin: 0 auto;
+            padding: 2rem;
+            position: absolute;
+            margin-top: 6rem;
+            margin-left: 1.5rem;
+        }
+        .overlayForm h2 {
+            text-align: center;
+        }
+        .flexContainer {
+            display: flex;
+            justify-content: space-around;
+        }
+        .formCol {
+            width: 12rem;
+        }
+        #calculateButton {
+            background-color: darkgreen;
+            padding: 0.5rem 3rem 0.5rem 3rem;
+            border-radius: 1rem;
+            color: white;
+            font-size: 200%;
+        }
+        #output {
+            text-align: center;
+            font-size: 180%;
+        }
+        #output p {
+            color: darkgreen;
+            text-align: center;
+        }
+        .infoCol {
+            margin:2rem;
+            width: 16rem;
+            border-top: 3px gray solid;
+            padding: 1rem 2rem 1rem 2rem;
+            box-shadow: 0px 1px 2px #888888;
+        }
+        .infoCol ul {
+            list-style-image: url('img/checkmark.png');
+        }
+        .infoCol h3, .infoBox h4 {
+            color: darkslategray;
+            font-size: 160%;
+        }
+        .infoCol p, .infoCol ul {
+            margin-top: 0px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <header>
+        <div class="logoArea">
+            <img src="img/logo.png" alt="Car Insurance Logo">
+        </div>
+        <div class="bannerArea">
+            <img src="img/banner.png" alt="Car Insurance Banner">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Team</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="overlayForm">
+            <h2>Great coverage begins<br>
+            with a custom quote</h2>
+
+            <form>
+                <div class="flexContainer">
+                    <div class="formCol">
+                        <p>Your name:</p>
+                        <p><input type="text" id="formName" name="formName" placeholder="Please enter your name"></p>
+                        <p>Country:</p>
+                        <p>
+                            <select id="formCountry">
+                                <option value="austria">Austria</option>
+                                <option value="hungary">Hungary</option>
+                                <option value="greece">Greece</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="formCol">
+                        <p>Age:</p>
+                        <p><input type="number" id="formAge" name="formAge" placeholder="Please enter your age"></p>
+                        <p>Horsepower of your car:</p>
+                        <p><input type="number" id="formHP" name="formHP" placeholder="Please enter horsepower"></p>
+                    </div>
+                </div>
+            </form>
+            <p align="center"><button id="calculateButton" onclick="calculateInsurance()">Calculate</button></p>
+            <div id="output"></div>
+        </div>
+        <div class="bgImage">
+            <h1>Car Insurance</h1>
+        </div>
+
+        <div class="infoArea">
+            <h2>Un-complicating car coverage</h2>
+            <p>Understanding your coverage options shoudn't be so hard.<br>
+            We'll guide you through available coverage types,<br>
+            starting with who and what is covered.</p>
+        </div>
+
+        <div class="flexContainer">
+            <div class="infoCol">
+                <h3>What comes standard</h3>
+                <p>The coverage you need</p>
+                <ul>
+                    <li>Bodily Injury Liability</li>
+                    <li>Property Damage</li>
+                    <li>Medical Payments</li>
+                </ul>
+                <h4>Benefits</h4>
+                <p>12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee</p>
+            </div>
+            <div class="infoCol">
+                <h3>Add-on protection & coverage</h3>
+                <p>for more peace of mind</p>
+                <ul>
+                    <li>Better Car Replacement</li>
+                    <li>Towing & Labor</li>
+                    <li>Rental Car Coverage</li>
+                </ul>
+                <h4>Earned Benefits</h4>
+                <p>Accidental Forgiveness<sup>1</sup> | New car replacement&trade;</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li>Home</li>
+            <li>Team</li>
+        </ul>
+        <p align="right"><img src="img/logo-inv.png"></p>
+        <p align="center">Marin - CodeFactory 2020</p>
+    </footer>
+    </div>
+
+    <script>
+        function calculateInsurance() {
+            let clientName = document.getElementById('formName').value;
+            let clientCountry = document.getElementById('formCountry').value;
+            let clientAge = parseInt(document.getElementById('formAge').value);
+            let clientHP = parseInt(document.getElementById('formHP').value);
+            let insurance = 0;
+
+            if (clientCountry == 'austria') {
+                insurance = clientHP * 100 / clientAge + 50;
+            } else if (clientCountry == 'hungary') {
+                insurance = clientHP * 120 / clientAge + 100;
+            } else if (clientCountry == 'greece') {
+                insurance = clientHP * 150 / (clientAge + 3) + 50;
+            }
+            document.getElementById('output').innerHTML = '<p>' + clientName + ', your insurance costs ' + insurance.toFixed(2) + '€</p>';
+        }
+    </script>
+</body>
+</html>
