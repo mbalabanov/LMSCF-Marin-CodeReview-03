@@ -42,6 +42,8 @@ function generateTeam() {
     let generatedCards = '';
     let generatedTeam = '';
     let counter = 0;
+    let currentVisible = '';
+
     for (let i in team.members) {
         generatedDetails += `
             <div class="teamMemberDetails invisible" id="details${team.members[i].id}">
@@ -81,9 +83,10 @@ function generateTeam() {
 }
 
 function showDetails(id) {
-    document.getElementById('details' + id).classList.remove('invisible');
+    currentVisible = 'details' + id;
+    document.getElementById(currentVisible).classList.toggle('invisible');
 }
 
 function closeDetails(id) {
-    document.getElementById('details' + id).classList.add('invisible');
+    document.getElementById(currentVisible).classList.add('invisible');
 }
