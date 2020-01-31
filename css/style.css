@@ -1,0 +1,139 @@
+body {
+    background-color: lightblue;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+#container {
+    width: 55rem;
+    margin: 0 auto;
+    background-color: white;
+}
+header {
+    display: flex;
+    background-color: #fff3f3;
+}
+.logoArea {
+    padding: 2rem;
+    margin-left: 1rem;
+}
+.bannerArea {
+    padding: 1rem;
+    margin-left: 6.5rem;
+}
+nav {
+    background-color: #8e1616;
+    padding: 0.6rem;
+    color: white;
+    margin-top: -5px;
+}
+nav ul, footer ul {
+    list-style-type: none;
+}
+nav ul li, footer ul li {
+    display: inline;
+    padding-right: 1.2rem;
+    font-size: 140%; 
+}
+nav ul li a, footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover, footer ul li a:hover, .active {
+    color: pink;
+}
+.bgImage {
+    padding: 1rem 2rem 1rem 3rem;
+    color: white;
+    background-image: url("../img/traffic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+}
+.infoArea {
+    background-color: lightgray;
+    text-align: center;
+    color: darkslategray;
+    padding: 1rem;
+    font-size: 120%;
+}
+.overlayForm {
+    background-color: rgb(255,255,255,0.7);
+    width: 48rem;
+    border: 1px solid gray;
+    padding: 1rem;
+    position: absolute;
+    margin-top: 6rem;
+    margin-left: 2.4rem;
+}
+.overlayForm h2 {
+    text-align: center;
+    font-size: 200%;
+    color: darkslategray;
+}
+.flexContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.formCol {
+    width: 12rem;
+}
+.formCol p {
+    font-size: 120%
+}
+.formCol input {
+    padding: 1rem;
+}
+.styled-select {
+    width: 11rem;
+}
+#calculateButton {
+    background-color: darkgreen;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 200%;
+    border: none;
+}
+#output {
+    text-align: center;
+    font-size: 180%;
+}
+#output p {
+    color: darkgreen;
+    text-align: center;
+}
+.infoCol {
+    margin: 2rem;
+    width: 19.4rem;
+    border-top: 3px gray solid;
+    padding: 1rem;
+    box-shadow: 0px 1px 2px #888888;
+}
+.infoCol ul {
+    list-style-image: url('../img/checkmark.png');
+}
+.infoCol h3 {
+    color: darkslategray;
+    font-weight: 100;
+    margin: 0;
+    font-size: 150%;
+}
+.infoCol h4 {
+    color: darkslategray;
+    font-weight: 100;
+    margin: 0;
+    font-size: 130%;
+}
+.infoCol p {
+    margin: 0;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+footer .right {
+    text-align: right;
+}
+footer .center {
+    text-align: center;
+}
