@@ -1,11 +1,12 @@
 body {
-    background-color: lightblue;
+    background-color: lightyellow;
     font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
 }
 #container {
     width: 55rem;
     margin: 0 auto;
     background-color: white;
+    border: 1px solid lightgray;
 }
 header {
     display: flex;
@@ -72,6 +73,7 @@ nav ul li a:hover, footer ul li a:hover, .active {
 .flexContainer {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .formCol {
     width: 12rem;
@@ -101,10 +103,53 @@ nav ul li a:hover, footer ul li a:hover, .active {
     color: darkgreen;
     text-align: center;
 }
+.invisible {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.teamMemberDetails {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 4px gray;
+    margin: 1rem;
+}
+.teamMemberFlex {
+    display: flex;
+}
+.imageBox {
+    width: 16rem;
+    padding-right: 3rem;
+}
+.imageBox img {
+    width: 100%;
+    border: 1px solid lightblue;
+}
+.descriptionBox {
+    width: 20rem;
+    padding: 4rem;
+}
 .teamMemberBox {
-    width: 12rem;
+    width: 14rem;
     padding: 1rem;
     box-shadow: 0px 1px 4px gray;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.teamMemberBox img {
+    width: 100%;
+    border: 1px solid lightblue;
+}
+.detailsbutton {
+    border: none;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    background-color: darkgreen;
+    border-radius: 1rem;
 }
 .infoCol {
     margin: 2rem;
