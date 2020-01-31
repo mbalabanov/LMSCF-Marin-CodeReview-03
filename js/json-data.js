@@ -5,7 +5,7 @@ var team = JSON.parse(`{
          "name": "Eleonore Lautenschläger",
          "job_title": "Investor Optimization Administrator",
          "email": "eleonore.lautenschlaeger@mail.com",
-         "hobby": "Dancing",
+         "hobby": "dancing",
          "city": "Wien",
          "image": "img/team/person01.jpg"
        },
@@ -15,7 +15,7 @@ var team = JSON.parse(`{
          "job_title": "Customer Program Designer",
          "city": "Graz",
          "email": "laura.tegelmann@mail.com",
-         "hobby": "Reading",
+         "hobby": "reading",
          "image": "img/team/person02.jpg"
        },
        {
@@ -23,7 +23,7 @@ var team = JSON.parse(`{
          "name": "Rebecca Hart",
          "job_title": "Senior Implementation Associate",
          "email": "rebecca.hart@mail.com",
-         "hobby": "Painting",
+         "hobby": "painting",
          "city": "Linz",
          "image": "img/team/person03.jpg"
        },
@@ -32,7 +32,7 @@ var team = JSON.parse(`{
          "name": "Jasper Merz",
          "job_title": "Central Accountability Engineer",
          "email": "jasper.merz@mail.com",
-         "hobby": "Hiking",
+         "hobby": "hiking",
          "city": "Salzburg",
          "image": "img/team/person04.jpg"
        },
@@ -41,7 +41,7 @@ var team = JSON.parse(`{
          "name": "Kira Lohse",
          "job_title": "Global Usability Executive",
          "email": "kira.lohse@mail.com",
-         "hobby": "Skating",
+         "hobby": "skating",
          "city": "Innsbruck",
          "image": "img/team/person05.jpg"
        },
@@ -50,7 +50,7 @@ var team = JSON.parse(`{
          "name": "Rene Störmer",
          "job_title": "Product Factors Associate",
          "email": "Rene.stoermer@mail.com",
-         "hobby": "Soccer",
+         "hobby": "soccer",
          "city": "Klagenfurt",
          "image": "img/team/person06.jpg"
        },
@@ -59,7 +59,7 @@ var team = JSON.parse(`{
          "name": "Juliane Brosig",
          "job_title": "Principal Solutions Architect",
          "email": "juliane.brosig@mail.com",
-         "hobby": "Dancing",
+         "hobby": "dancing",
          "city": "Wels",
          "image": "img/team/person07.jpg"
        },
@@ -68,7 +68,7 @@ var team = JSON.parse(`{
          "name": "Max Lüdke",
          "job_title": "Dynamic Tactics Supervisor",
          "email": "max.lüdke@mail.com",
-         "hobby": "Reading",
+         "hobby": "reading",
          "city": "Sankt Pölten",
          "image": "img/team/person08.jpg"
        },
@@ -77,7 +77,7 @@ var team = JSON.parse(`{
          "name": "Jochen Velten",
          "job_title": "Senior Team Associate",
          "email": "jochen.velten@mail.com",
-         "hobby": "Painting",
+         "hobby": "painting",
          "city": "Dornbirn",
          "image": "img/team/person09.jpg"
        },
@@ -86,7 +86,7 @@ var team = JSON.parse(`{
          "name": "Melissa Tauch",
          "job_title": "Direct Web Consultant",
          "email": "melissa.tauch@mail.com",
-         "hobby": "Hiking",
+         "hobby": "hiking",
          "city": "Wiener Neustadt",
          "image": "img/team/person10.jpg"
        },
@@ -95,7 +95,7 @@ var team = JSON.parse(`{
          "name": "Janna Baron",
          "job_title": "Internal Operations Orchestrator",
          "email": "janna.baron@mail.com",
-         "hobby": "Martial Arts",
+         "hobby": "combat sport",
          "city": "Steyr",
          "image": "img/team/person11.jpg"
        },
@@ -104,7 +104,7 @@ var team = JSON.parse(`{
          "name": "Heidi Glanz",
          "job_title": "Senior Marketing Consultant",
          "email": "heidi.glanz@mail.com",
-         "hobby": "Juggling",
+         "hobby": "juggling",
          "city": "Feldkirch",
          "image": "img/team/person12.jpg"
        },
@@ -113,7 +113,7 @@ var team = JSON.parse(`{
          "name": "Hanna Zenner",
          "job_title": "Global Configuration Manager",
          "email": "hanna.zenner@mail.com",
-         "hobby": "Trampoline jumping",
+         "hobby": "trampoline jumping",
          "city": "Bregenz",
          "image": "img/team/person13.jpg"
        },
@@ -122,7 +122,7 @@ var team = JSON.parse(`{
          "name": "Annelie Heiß",
          "job_title": "Investor Response Liason",
          "email": "annelie.heiss@mail.com",
-         "hobby": "Golf",
+         "hobby": "golf",
          "city": "Leonding",
          "image": "img/team/person14.jpg"
        },
@@ -131,7 +131,7 @@ var team = JSON.parse(`{
          "name": "Corinna Funke",
          "job_title": "Customer Optimization Assistant",
          "email": "corinna.funke@mail.com",
-         "hobby": "Table tennis",
+         "hobby": "table tennis",
          "city": "Klosterneuburg",
          "image": "img/team/person15.jpg"
        },
@@ -140,7 +140,7 @@ var team = JSON.parse(`{
          "name": "Bodo Bleibtreu",
          "job_title": "Interactive Metrics Coordinator",
          "email": "bodo.bleibtreu@mail.com",
-         "hobby": "Running",
+         "hobby": "running",
          "city": "Baden",
          "image": "img/team/person16.jpg"
        },
@@ -149,7 +149,7 @@ var team = JSON.parse(`{
          "name": "Hans-Joachim Opel",
          "job_title": "Internal Resonance Specialist",
          "email": "hans-oachim.opel@mail.com",
-         "hobby": "Traveling",
+         "hobby": "traveling",
          "city": "Wolfsberg",
          "image": "img/team/person17.jpg"
        },
@@ -158,7 +158,7 @@ var team = JSON.parse(`{
          "name": "Peter Brand",
          "job_title": "Corporate Research Strategist",
          "email": "peter.brand@mail.com",
-         "hobby": "Table tennis",
+         "hobby": "table tennis",
          "city": "Krems an der Donau",
          "image": "img/team/person18.jpg"
        }

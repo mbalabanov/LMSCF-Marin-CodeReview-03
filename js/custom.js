@@ -55,7 +55,7 @@ function generateTeam() {
                         <h3>${team.members[i].name}</h3>
                         <h4>${team.members[i].job_title}</h4>
                         <p>Contact: <a href="mailto:${team.members[i].email}">${team.members[i].email}</a></p>
-                        <p>Comes from <strong>${team.members[i].city}</strong>, and <strong>${team.members[i].hobby}</strong> is the favorite hobby.</p>
+                        <p>Comes from <strong>${team.members[i].city}</strong>, and <strong>${team.members[i].hobby}</strong> is their favorite hobby.</p>
                         <button class="detailsbutton" onclick="closeDetails(${team.members[i].id})">Close details</button>
                     </div>
                 </div>
@@ -82,11 +82,21 @@ function generateTeam() {
     document.getElementById('teamlist').innerHTML = generatedTeam;
 }
 
-function showDetails(id) {
-    currentVisible = 'details' + id;
-    document.getElementById(currentVisible).classList.toggle('invisible');
+function showDetails(toggle_id) {
+
+    let allVisibles = document.getElementsByClassName('nothidden');
+    if (allVisibles.length > 0) {
+        document.getElementById(allVisibles[0].id).classList.toggle('invisible');
+        document.getElementById(allVisibles[0].id).classList.remove('nothidden');
+    }
+
+    document.getElementById('details' + toggle_id).classList.toggle('invisible');
+    document.getElementById('details' + toggle_id).classList.add('nothidden');
+
+    location.href = '#details' + toggle_id;
 }
 
-function closeDetails(id) {
-    document.getElementById(currentVisible).classList.add('invisible');
+function closeDetails(toggle_id) {
+    document.getElementById('details' + toggle_id).classList.toggle('invisible');
+    document.getElementById('details' + toggle_id).classList.remove('nothidden');
 }
