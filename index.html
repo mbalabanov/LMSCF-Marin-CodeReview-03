@@ -21,7 +21,7 @@
  │              │         │                  │     │         │                 │         │
  │              ▼         ▼                  ▼     ▼         ▼                 ▼         │
  │ ┌───────────────┐┌───────────────┐┌───────────────┐┌───────────────┐┌───────────────┐ │
- │ │      6.       ││      4.       ││      3.       ││      5.       ││      7.       │ │
+ │ │    6. Dir.    ││      4.       ││      3.       ││      5.       ││    7. Dir.    │ │
  │ │     /img      ││ js/custom.js  ││/css/styles.css││js/json-data.js││   /img/team   │ │
  │ │               ││               ││               ││               ││               │ │
  │ └───────────────┘└───────────────┘└───────────────┘└───────────────┘└───────────────┘ │
@@ -88,6 +88,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 </head>
 <body>
+    <!-- This is the start of the regular boilerplate used on both index.html and team.html -->
     <div id="container">
         <header>
             <div class="logoArea">
@@ -103,6 +104,10 @@
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
+
+        <!-- This page has a specific format: The insurance calculator has a transparent background
+        and it is overlayed over an div which has a background image. So the main section starts
+        with the overlay, the insurance calculator form -->
         <main>
             <div class="overlayForm">
                 <h2>Great coverage begins<br>
@@ -144,6 +149,7 @@
                 starting with who and what is covered.</p>
             </div>
 
+            <!-- This section has two columns with insurance information -->
             <div class="flexContainer">
                 <div class="infoCol">
                     <h3>What comes standard</h3>
@@ -170,6 +176,7 @@
             </div>
         </main>
 
+        <!-- The footer reuses some of the styling of the nav (below the header) -->
         <footer>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
@@ -180,9 +187,9 @@
         </footer>
     </div>
 
-    <script src="js/json-data.js" ></script>
     <script src="js/custom.js" ></script>
 
+    <!-- This initiates the functions of the insurance calculator in the overlay form -->
     <script>
         insuranceForm();
     </script>
