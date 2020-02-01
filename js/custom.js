@@ -27,20 +27,25 @@
 └────────────────────────────────────────────────────────────────────────────────┘
 */
 
+// Initializing the necessary variables for the insurance calculator on index.html.
 let clientName = '';
 let clientCountry = '';
 let clientAge = '';
 let clientHP = '';
 let insurance = 0;
 
+/* This function is only used on index.html. It add the event listener to the "Calculate"
+   button and calls the function to get the user inputs in the insurance form */
 function insuranceForm() {
     document.getElementById('calculateButton').addEventListener('click', function(event) {
         event.preventDefault();
-        calculateInsurance();
+        getInsuranceForm();
     });
 }
 
-function calculateInsurance() {
+/* This function checks the form inputs for validity and then sends the entered parameters
+   to the function that actually calculates the insurance payments. */
+function getInsuranceForm() {
     clientName = document.getElementById('formName').value;
     clientCountry = document.getElementById('formCountry').value;
     clientAge = parseInt(document.getElementById('formAge').value);
@@ -53,6 +58,12 @@ function calculateInsurance() {
     }
 }
 
+/* This is the universal function to calculate the insurance payments. It needs the inputs
+   to change the multiplication factors and the numbers to be added depending on which
+   country has been selected.
+   After declaring the local variables necessary, the function starts out with three conditional
+   if statements to set all factors of the insurance calculator to match the user's country. Then
+   it runs the calculation and displays it in a prepared div. */
 function calculateInsurancePerCountry(clientCountry,clientAge,clientHP) {
     let factor = 0;
     let addition = 0;
@@ -66,6 +77,11 @@ function calculateInsurancePerCountry(clientCountry,clientAge,clientHP) {
     document.getElementById('output').innerHTML = '<p>Hey ' + clientName + ', your insurance costs ' + insurance.toFixed(2) + '€<br>(Insurance calculated for <span class="countryName">' + clientCountry + '</span>.)</p>';
 }
 
+/* This is the main function of the team.html page. The JSON file with the personal data is taken,
+   iterated through and the necessary infos are placed into a literal string with the HTML necessary to
+   generate the small cards with the team members' infos. After every three small cards, the loop
+   adds three hidden large cards. These large cards are not visible, but they need to be in the area
+   above their small counterparts.*/
 function generateTeam() {
     let generatedDetails = '';
     let generatedCards = '';
@@ -111,6 +127,12 @@ function generateTeam() {
     document.getElementById('teamlist').innerHTML = generatedTeam;
 }
 
+/* Here is where things get a bit tricky. I did not want the user to have to close all
+   large cards indiviidually, but rather wanted any open large cards to close, when a
+   user clicks on a different small card to see someone else's details. For this purpose,
+   any time a user clicks on "Show details", the function checks if there are any large
+   cards open already and closes them before opening the new large card.
+   */
 function showDetails(toggle_id) {
 
     let allVisibles = document.getElementsByClassName('nothidden');
@@ -125,6 +147,7 @@ function showDetails(toggle_id) {
     location.href = '#details' + toggle_id;
 }
 
+/* This is simply the close function for the "Close" button in the large cards. */
 function closeDetails(toggle_id) {
     document.getElementById('details' + toggle_id).classList.toggle('invisible');
     document.getElementById('details' + toggle_id).classList.remove('nothidden');

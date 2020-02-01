@@ -56,6 +56,10 @@
                 <p>Stock images from <a href="http://unsplash.com" target="_blank">Unsplash.com</a></p>
             </div>
 
+            <!-- The special feature of this page is the list of team members with photos. They are
+            generated from a JSON file and displayed as cars with a photo in the div with the class
+            flexContainer and the ID teamlist. When you click on the photo or the button "Show details",
+            then a larger card opens showing a slightly larger image and some additional information.-->
             <div class="flexContainer" id="teamlist"></div>
         </main>
 
@@ -69,9 +73,11 @@
         </footer>
     </div>
 
+    <!-- The JSON file is loaded first, then the file custom.js is used for the functionalities -->
     <script src="js/json-data.js" ></script>
     <script src="js/custom.js" ></script>
 
+    <!-- This function initiates the team list. -->
     <script>
         generateTeam();
     </script>
