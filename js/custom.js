@@ -18,7 +18,7 @@ function calculateInsurance() {
     clientHP = parseInt(document.getElementById('formHP').value);
 
     if (clientName == '' || clientAge == '' || clientHP == '') {
-        document.getElementById('output').innerHTML = '<p>Please enter the information into all input fields</p>';
+        document.getElementById('output').innerHTML = '<p>Please complete all input fields</p>';
     } else {
         calculateInsurancePerCountry(clientCountry,clientAge,clientHP);
     }
@@ -30,11 +30,11 @@ function calculateInsurancePerCountry(clientCountry,clientAge,clientHP) {
 
     if (clientCountry == 'austria') { factor = 100; addition = 50};
     if (clientCountry == 'hungary') { factor = 120; addition = 100 };
-    if (clientCountry == 'greece') { factor = 50; addition = 50; age = age + 3 };
+    if (clientCountry == 'greece') { factor = 50; addition = 50; clientAge = clientAge + 3 };
 
     insurance = clientHP * factor / clientAge + addition;
 
-    document.getElementById('output').innerHTML = '<p>' + clientName + ', your insurance costs ' + insurance.toFixed(2) + '€<br>(The insurance is calculated for ' + clientCountry + '.)</p>';
+    document.getElementById('output').innerHTML = '<p>Hey ' + clientName + ', your insurance costs ' + insurance.toFixed(2) + '€<br>(Insurance calculated for <span class="countryName">' + clientCountry + '</span>.)</p>';
 }
 
 function generateTeam() {
@@ -63,9 +63,9 @@ function generateTeam() {
         `;
         generatedCards += `
             <div class="teamMemberBox" id="card${team.members[i].id}">
-                <div class="label">
-                    <p><img src="${team.members[i].image}" alt="${team.members[i].name}" onclick="showDetails(${team.members[i].id})"></p>
-                    <h4>${team.members[i].name}</h4>
+                <div class="nameTag">
+                    <img src="${team.members[i].image}" alt="${team.members[i].name}" onclick="showDetails(${team.members[i].id})">
+                    <div class="label">${team.members[i].name}</div>
                 </div>
                 <button class="detailsbutton" onclick="showDetails(${team.members[i].id})">Show Details</button>
             </div>

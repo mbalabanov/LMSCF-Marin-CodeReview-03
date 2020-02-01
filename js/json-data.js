@@ -146,9 +146,9 @@ var team = JSON.parse(`{
        },
        {
          "id": "17",
-         "name": "Hans-Joachim Opel",
+         "name": "Kai Opel",
          "job_title": "Internal Resonance Specialist",
-         "email": "hans-oachim.opel@mail.com",
+         "email": "kai.opel@mail.com",
          "hobby": "traveling",
          "city": "Wolfsberg",
          "image": "img/team/person17.jpg"

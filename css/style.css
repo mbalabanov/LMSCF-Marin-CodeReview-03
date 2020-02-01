@@ -62,7 +62,7 @@ nav ul li a:hover, footer ul li a:hover, .active {
     border: 1px solid gray;
     padding: 1rem;
     position: absolute;
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-left: 2.4rem;
 }
 .overlayForm h2 {
@@ -79,13 +79,14 @@ nav ul li a:hover, footer ul li a:hover, .active {
     width: 12rem;
 }
 .formCol p {
-    font-size: 120%
+    font-size: 120%;
 }
 .formCol input {
-    padding: 1rem;
+    padding: 0.2rem;
+    font-size: 90%;
 }
 .styled-select {
-    width: 11rem;
+    width: 14rem;
 }
 #calculateButton {
     background-color: darkgreen;
@@ -103,11 +104,14 @@ nav ul li a:hover, footer ul li a:hover, .active {
     color: darkgreen;
     text-align: center;
 }
+#output .countryName {
+    text-transform: capitalize;
+}
 .invisible {
     display: none;
 }
 .visible {
-    
+    /* This is a marker for the visible team members details cards*/
 }
 .teamMemberDetails {
     width: 100%;
@@ -139,9 +143,23 @@ nav ul li a:hover, footer ul li a:hover, .active {
     border-radius: 1rem;
     text-align: center;
 }
+.nameTag {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.label {
+    position: absolute;
+    bottom: 9px;
+    left: 6px;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    background-color: rgb(0,0,0,0.6);
+    font-weight: bold;
+    text-align: center;
+}
 .teamMemberBox img {
     width: 100%;
-    border: 1px solid lightblue;
 }
 .detailsbutton {
     border: none;
@@ -186,4 +204,41 @@ footer .right {
 }
 footer .center {
     text-align: center;
+}
+#footer-logo {
+    margin-right: 3rem;
+}
+
+@media only screen and (max-width: 640px) {
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+    .bannerArea {
+        display: none;
+    }
+    .overlayForm {
+        width: 100%;
+        padding: 0.2rem;
+        margin: 6rem 0 0 0;
+    }
+    .formCol p {
+        font-size: 100%;
+    }
+    .formCol input {
+        padding: 0.2rem;
+        font-size: 90%;
+    }
+    .styled-select {
+        width: 12rem;
+    }
+    .infoCol {
+        margin: 1rem;
+        width: 100%;
+    }
+    .teamMemberBox {
+        width: 8.6rem;
+        margin: 1rem 0 1rem 0;
+        padding: 0.6rem;
+    }
 }
