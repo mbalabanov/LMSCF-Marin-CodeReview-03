@@ -1,3 +1,82 @@
+<!--                                                                                          
+ ┌───────────────────────────────────────────────────────────────────────────────────────┐
+ │            ___          _        _     ___ _               _                          │
+ │           | _ \_ _ ___ (_)___ __| |_  / __| |_ _ _ _  _ __| |_ _  _ _ _ ___           │
+ │           |  _/ '_/ _ \| / -_) _|  _| \__ \  _| '_| || / _|  _| || | '_/ -_)          │
+ │           |_| |_| \___// \___\__|\__| |___/\__|_|  \_,_\__|\__|\_,_|_| \___|          │
+ │                      |__/                                                             │
+ │                                                                                       │
+ │           This is the solution for Code Review from Friday, January 31st,             │
+ │           2020 by Marin Balabanov. It includes all the requirements for full          │
+ │           bonus points. The structure of the project is as follows:                   │
+ │                                                                                       │
+ │            ┌───────────────┐                 ┌───────────────┐                        │
+ │            │               │◀───────────────▷│               │                        │
+ │            │      1.       │                 │      2.       │                        │
+ │            │  index.html   │◁─────────────┐  │   team.html   │◁─────────────┐         │
+ │            │               │              │  │               │              │         │
+ │            │               │              │  │               │              │         │
+ │            └───────────────┘              │  └───────────────┘              │         │
+ │              △         △                  │     △         △                 │         │
+ │              │         │                  │     │         │                 │         │
+ │              ▼         ▼                  ▼     ▼         ▼                 ▼         │
+ │ ┌───────────────┐┌───────────────┐┌───────────────┐┌───────────────┐┌───────────────┐ │
+ │ │      6.       ││      4.       ││      3.       ││      5.       ││      7.       │ │
+ │ │     /img      ││ js/custom.js  ││/css/styles.css││js/json-data.js││   /img/team   │ │
+ │ │               ││               ││               ││               ││               │ │
+ │ └───────────────┘└───────────────┘└───────────────┘└───────────────┘└───────────────┘ │
+ │                                                                                       │
+ │       1. index.html: This file containing the main solution, a calculator for         │
+ │       car insurance payments. It is linked to the main CSS file at                    │
+ │       /css/styles.css, the main JS file at /js/custom.js and the images in the        │
+ │       directory img.                                                                  │
+ │                                                                                       │
+ │       2. team.html: This is the solution for the bonus tasks. On this page a          │
+ │       list of mock team members is read from the JSON file at /js/json-data.js,       │
+ │       it takes its functionalities from the main JS file at /js/custom.js and         │
+ │       uses the images at /img/team/ (license-free stock images from                   │
+ │       unsplash.com).                                                                  │
+ │                                                                                       │
+ │       3. /css/styles.css: Main and only CSS file.                                     │
+ │                                                                                       │
+ │       4. /js/custom.js: Main Javascript file with the functions for index.html        │
+ │       and team.html, including the insurance calculator and the recursive             │
+ │       member card generator for the team list.                                        │
+ │                                                                                       │
+ │       5. /js/json-data.js: Fake people list as JSON data as needed for the team       │
+ │       member list at team.html.                                                       │
+ │                                                                                       │
+ │       6. /img directory: This contains the logos and incidental images for the        │
+ │       site.                                                                           │
+ │                                                                                       │
+ │       7. /img/team directory: The mock images used for the team list can be           │
+ │       found here (taken from unsplash.com                                             │
+ │                                                                                       │
+ └───────────────────────────────────────────────────────────────────────────────────────┘
+ ┌───────────────────────────────────────────────────────────────────────────────────────┐
+ │     __  __            _         ____        _       _                                 │
+ │    |  \/  |          (_)       |  _ \      | |     | |                                │
+ │    | \  / | __ _ _ __ _ _ __   | |_) | __ _| | __ _| |__   __ _ _ __   _____   __     │
+ │    | |\/| |/ _` | '__| | '_ \  |  _ < / _` | |/ _` | '_ \ / _` | '_ \ / _ \ \ / /     │
+ │    | |  | | (_| | |  | | | | | | |_) | (_| | | (_| | |_) | (_| | | | | (_) \ V /      │
+ │    |_|  |_|\__,_|_|  |_|_| |_| |____/ \__,_|_|\__,_|_.__/ \__,_|_| |_|\___/ \_/       │
+ │                                                                                       │
+ │            _____          _        _____            _                 ____            │
+ │           / ____|        | |      |  __ \          (_)               |___ \           │
+ │          | |     ___   __| | ___  | |__) |_____   ___  _____      __   __) |          │
+ │          | |    / _ \ / _` |/ _ \ |  _  // _ \ \ / / |/ _ \ \ /\ / /  |__ <           │
+ │          | |___| (_) | (_| |  __/ | | \ \  __/\ V /| |  __/\ V  V /   ___) |          │
+ │           \_____\___/ \__,_|\___| |_|  \_\___| \_/ |_|\___| \_/\_/   |____/           │
+ │                                                                                       │
+ │                             _    _ _______ __  __ _                                   │
+ │                            | |  | |__   __|  \/  | |                                  │
+ │                            | |__| |  | |  | \  / | |                                  │
+ │                            |  __  |  | |  | |\/| | |                                  │
+ │                            | |  | |  | |  | |  | | |____                              │
+ │                            |_|  |_|  |_|  |_|  |_|______|                             │
+ │                                                                                       │
+ └───────────────────────────────────────────────────────────────────────────────────────┘
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +86,6 @@
     <title>Car Insurance</title>
     <link rel="icon" href="img/checkmark.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-
 </head>
 <body>
     <div id="container">

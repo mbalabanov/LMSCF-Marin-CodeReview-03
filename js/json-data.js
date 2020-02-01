@@ -1,3 +1,37 @@
+/*
+ ┌──────────────────────────────────────────────────────────────────────────────────┐
+ │   __  __            _         ____        _       _                              │
+ │  |  \/  |          (_)       |  _ \      | |     | |                             │
+ │  | \  / | __ _ _ __ _ _ __   | |_) | __ _| | __ _| |__   __ _ _ __   _____   __  │
+ │  | |\/| |/ _` | '__| | '_ \  |  _ < / _` | |/ _` | '_ \ / _` | '_ \ / _ \ \ / /  │
+ │  | |  | | (_| | |  | | | | | | |_) | (_| | | (_| | |_) | (_| | | | | (_) \ V /   │
+ │  |_|  |_|\__,_|_|  |_|_| |_| |____/ \__,_|_|\__,_|_.__/ \__,_|_| |_|\___/ \_/    │
+ │                                                                                  │
+ │          _____          _        _____            _                 ____         │
+ │         / ____|        | |      |  __ \          (_)               |___ \        │
+ │        | |     ___   __| | ___  | |__) |_____   ___  _____      __   __) |       │
+ │        | |    / _ \ / _` |/ _ \ |  _  // _ \ \ / / |/ _ \ \ /\ / /  |__ <        │
+ │        | |___| (_) | (_| |  __/ | | \ \  __/\ V /| |  __/\ V  V /   ___) |       │
+ │         \_____\___/ \__,_|\___| |_|  \_\___| \_/ |_|\___| \_/\_/   |____/        │
+ │                                                                                  │
+ │                                 _  _____  ____  _   _                            │
+ │                                | |/ ____|/ __ \| \ | |                           │
+ │                                | | (___ | |  | |  \| |                           │
+ │                            _   | |\___ \| |  | | . ` |                           │
+ │                           | |__| |____) | |__| | |\  |                           │
+ │                            \____/|_____/ \____/|_| \_|                           │
+ │                                                                                  │
+ │ Welcome to /js/json-data.js, this file contains faked data for the people list   │
+ │ as JSON data. This is needed for the team member list at team.html.              │
+ │                                                                                  │
+ │ The random German names are generated on https://realnamecreator.alexjonas.de,   │
+ │ the job titles are generated from https://www.bullshitjob.com/title/, the list   │
+ │ of cities in Austria is from https://de.wikipedia.org/wiki/Liste_der_Städte      │
+ │ _in_Österreich and the image paths lead to images downloaded from                │
+ │ https://unsplash.com                                                             │
+ └──────────────────────────────────────────────────────────────────────────────────┘
+*/
+
 var team = JSON.parse(`{
     "members": [
        {
